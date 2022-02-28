@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Plaguicida;
+use App\Http\Resources\V1\PlaguicidaResource;
 use Illuminate\Http\Request;
 
 class PlaguicidaController extends Controller

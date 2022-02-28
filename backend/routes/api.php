@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//region -- API Plaguicida
+Route::group(['prefix' => 'v1'], function () {
+    Route::apiResource('plaguicidas', 'Api\V1\PlaguicidaController')
+            ->only(['index', 'show', 'destroy','update','store']);
+
+    Route::get('plaguicidasDeleted', 'Api\V1\PlaguicidaController@deleted');
+
+    Route::get('plaguicidasRestore/{id}', 'Api\V1\PlaguicidaController@restore');
+});
+//endregion
