@@ -26,7 +26,7 @@ export default function NavBar() {
   return (
     <Popover className="relative bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link to="/">
               <span className="sr-only">Nuup</span>

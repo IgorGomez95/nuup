@@ -8,10 +8,12 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <NavBar/>
-      <Routes>
-        <Route path="/" element={<PlaguicidasScreen />} className="text-base font-medium text-white hover:text-gray-900" />
-        <Route path="/eliminados" element={<EliminadosScreen />} />
-      </Routes>
+      <section className="mt-10 bg-white lg:max-w-6xl md:max-w-3xl max-w-xl overflow-hidden mx-auto rounded-md p-5">
+        <Routes>
+          <Route path="/" element={<PlaguicidasScreen />} />
+          <Route path="/eliminados" element={<EliminadosScreen />} />
+        </Routes>
+      </section>
     </BrowserRouter>
   )
 }
