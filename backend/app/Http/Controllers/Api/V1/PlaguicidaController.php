@@ -17,7 +17,7 @@ class PlaguicidaController extends Controller
      */
     public function index()
     {
-        return PlaguicidaResource::collection(Plaguicida::latest()->paginate());
+        return PlaguicidaResource::collection(Plaguicida::get());
     }
 
     /**

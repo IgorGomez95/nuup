@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const useForm = ( initialState = {} ) => {
-    // Falta lógica de validación y campos obligatorios
+    
     const [values, setValues] = useState(initialState);
 
     const handleInputChange = ( {target} ) => {

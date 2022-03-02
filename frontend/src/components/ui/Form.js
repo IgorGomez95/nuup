@@ -1,9 +1,11 @@
+import { useReducer } from 'react';
+import { useFetchActions } from '../../hooks/useFetchActions';
 import { useForm } from '../../hooks/useForm';
+import { plaguicidasReducer } from "../reducers/plaguicidasReducer";
 
 export const Form = () => {
-    // los hooks no se pueden utilizar de manera condicional
-    // useEffect es un hook que permite ejecutar un efecto
-    // secundario cuando sucede algo en el componente
+    const initialState = '';
+    // 
     const [formValues, handleInputChange] = useForm({
         nombre_comercial: '',
         ingrediente_activo: '',
@@ -14,8 +16,9 @@ export const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         console.log(formValues);
-    }
+    };
 
     return (
         <form onSubmit={ handleSubmit } className='mt-4'>
